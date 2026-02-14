@@ -1,0 +1,22 @@
+[
+  {"name":"Taj Mahal","state":"Uttar Pradesh","image":"https://picsum.photos/300/200?1"},
+  {"name":"Red Fort","state":"Delhi","image":"https://picsum.photos/300/200?2"},
+  {"name":"Hawa Mahal","state":"Rajasthan","image":"https://picsum.photos/300/200?3"},
+  {"name":"Gateway of India","state":"Maharashtra","image":"https://picsum.photos/300/200?4"},
+  {"name":"Golden Temple","state":"Punjab","image":"https://picsum.photos/300/200?5"},
+  {"name":"Charminar","state":"Telangana","image":"https://picsum.photos/300/200?6"},
+  {"name":"Mysore Palace","state":"Karnataka","image":"https://picsum.photos/300/200?7"},
+  {"name":"Konark Sun Temple","state":"Odisha","image":"https://picsum.photos/300/200?8"},
+  {"name":"Kedarnath","state":"Uttarakhand","image":"https://picsum.photos/300/200?9"},
+  {"name":"Manali","state":"Himachal Pradesh","image":"https://picsum.photos/300/200?10"},
+  {"name":"Shimla","state":"Himachal Pradesh","image":"https://picsum.photos/300/200?11"},
+  {"name":"Ooty","state":"Tamil Nadu","image":"https://picsum.photos/300/200?12"},
+  {"name":"Munnar","state":"Kerala","image":"https://picsum.photos/300/200?13"},
+  {"name":"Darjeeling","state":"West Bengal","image":"https://picsum.photos/300/200?14"},
+  {"name":"Leh Ladakh","state":"Ladakh","image":"https://picsum.photos/300/200?15"},
+  {"name":"Jim Corbett","state":"Uttarakhand","image":"https://picsum.photos/300/200?16"},
+  {"name":"Ranthambore","state":"Rajasthan","image":"https://picsum.photos/300/200?17"},
+  {"name":"Kaziranga","state":"Assam","image":"https://picsum.photos/300/200?18"},
+  {"name":"Marina Beach","state":"Tamil Nadu","image":"https://picsum.photos/300/200?19"},
+  {"name":"Goa Beach","state":"Goa","image":"https://picsum.photos/300/200?20"}
+]
