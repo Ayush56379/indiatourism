@@ -3,74 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1000+ Famous Places in India</title>
-
-<style>
-body { font-family: Arial; margin: 0; background: #f4f4f4; }
-header { background: #0077b6; color: white; text-align: center; padding: 20px; }
-.container { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-  gap: 15px; 
-  padding: 20px; 
-}
-.card { 
-  background: white; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-  text-align: center; 
-  padding: 10px;
-}
-.card img { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; }
-</style>
+<title>Famous Places in India</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<h1>1000+ Famous Tourist Places in India</h1>
+<h1>Famous Tourist Places in India</h1>
 </header>
 
 <div class="container" id="placesContainer"></div>
 
 <script>
+fetch("places.json")
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById("placesContainer");
 
-const famousPlaces = [
-"Taj Mahal","Red Fort","Qutub Minar","Hawa Mahal","Gateway of India",
-"Golden Temple","Charminar","Mysore Palace","India Gate","Lotus Temple",
-"Konark Sun Temple","Jagannath Temple","Kedarnath","Badrinath",
-"Rameshwaram","Meenakshi Temple","Somnath Temple","Vaishno Devi",
-"Ajanta Caves","Ellora Caves","Sundarbans","Kaziranga",
-"Ranthambore","Jim Corbett","Manali","Shimla","Ooty","Munnar",
-"Darjeeling","Leh Ladakh","Goa Beach","Marina Beach"
-];
+    data.forEach(place => {
+      const card = document.createElement("div");
+      card.className = "card";
 
-const states = [
-"Uttar Pradesh","Delhi","Rajasthan","Maharashtra",
-"Punjab","Telangana","Karnataka","Gujarat",
-"Tamil Nadu","Kerala","Himachal Pradesh",
-"Uttarakhand","West Bengal","Assam","Goa"
-];
+      card.innerHTML = `
+        <img src="${place.image}">
+        <h3>${place.name}</h3>
+        <p>${place.state}</p>
+      `;
 
-const container = document.getElementById("placesContainer");
-
-// 1000+ cards auto generate
-for(let i=0; i<1000; i++){
-    let placeName = famousPlaces[i % famousPlaces.length] + " " + (i+1);
-    let stateName = states[i % states.length];
-
-    const card = document.createElement("div");
-    card.className = "card";
-
-    card.innerHTML = `
-        <img src="https://picsum.photos/300/200?random=${i}">
-        <h3>${placeName}</h3>
-        <p>${stateName}</p>
-    `;
-
-    container.appendChild(card);
-}
-
+      container.appendChild(card);
+    });
+  });
 </script>
 
 </body>
